@@ -19,7 +19,7 @@ type RevealProps = PropsWithChildren<{
 export function Reveal({
   as: Component = "div",
   delay = 0,
-  threshold = 0.25,
+  threshold = 0.1,
   once = true,
   className,
   children,
@@ -46,7 +46,7 @@ export function Reveal({
       },
       {
         threshold,
-        rootMargin: "0px 0px -10% 0px",
+        rootMargin: "0px 0px 20% 0px",
       },
     );
 

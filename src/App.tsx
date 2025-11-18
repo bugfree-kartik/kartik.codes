@@ -361,8 +361,8 @@ function App() {
         <main>
 
         <section id="about" className="section section--design">
-            <Reveal className="section-popup">
-              <Reveal as="header" className="section__header" threshold={0.2}>
+            <Reveal className="section-popup" threshold={0.15}>
+              <Reveal as="header" className="section__header" threshold={0.1}>
                 <h2>{sections[0].title}</h2>
               </Reveal>
               <div className="summary__grid">
@@ -374,6 +374,7 @@ function App() {
                     src="/profile.JPG"
                     alt="Profile"
                     className="summary__photo-img"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -381,15 +382,15 @@ function App() {
           </section>
 
         <section id="experience" className="section section--battery">
-            <Reveal className="section-popup">
-              <Reveal as="header" className="section__header">
+            <Reveal className="section-popup" threshold={0.15}>
+              <Reveal as="header" className="section__header" threshold={0.1}>
                 <h2>{sections[2].title}</h2>
                 <p className="section__lead">{sections[2].description}</p>
               </Reveal>
 
               <div className="battery__grid">
                 <Reveal className="battery__features">
-                  <img src="/pwc-logo.png" alt="PwC" className="battery__logo" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                  <img src="/pwc-logo.png" alt="PwC" className="battery__logo" loading="lazy" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                   <h3>PricewaterhouseCoopers — Oct 2022 – Jul 2025</h3>
                   <p className="battery__job-title">Software Engineer <span className="battery__awards">• 3× PwC 'Star' Awards, 1x 'Above N Beyond' Award</span></p>
                   <ul>
@@ -401,8 +402,8 @@ function App() {
                     <li>Re-architected synchronous API chains into resilient async event-driven workflows (retry, exponential backoff, DLQ redrive), eliminating cascading failures during peak load and enhancing system fault-tolerance across services.</li>
                   </ul>
                 </Reveal>
-                <Reveal className="battery__features" delay={80}>
-                  <img src="/cognizant-logo.png" alt="Cognizant" className="battery__logo" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                <Reveal className="battery__features" delay={30}>
+                  <img src="/cognizant-logo.png" alt="Cognizant" className="battery__logo" loading="lazy" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                   <h3>Cognizant Technology Solutions — Nov 2020 – Oct 2022</h3>
                   <p className="battery__job-title">Software Engineer</p>
                   <ul>
@@ -419,8 +420,8 @@ function App() {
           </section>
 
         <section id="projects" className="section section--performance">
-            <Reveal className="section-popup">
-              <Reveal as="header" className="section__header">
+            <Reveal className="section-popup" threshold={0.15}>
+              <Reveal as="header" className="section__header" threshold={0.1}>
                 <h2>{sections[1].title}</h2>
               </Reveal>
 
@@ -430,7 +431,7 @@ function App() {
                     <Reveal
                       key={item.label}
                       className="stat"
-                      delay={120 + index * 80}
+                      delay={index * 30}
                     >
                       {projectLinks[item.stat] ? (
                         <a href={projectLinks[item.stat]} target="_blank" rel="noreferrer" className="stat__link">
@@ -465,8 +466,8 @@ function App() {
           </section>
 
         <section id="certifications" className="section section--colors">
-            <Reveal className="section-popup">
-              <Reveal as="header" className="section__header">
+            <Reveal className="section-popup" threshold={0.15}>
+              <Reveal as="header" className="section__header" threshold={0.1}>
                 <h2>TECHNICAL SKILLS</h2>
               </Reveal>
 
@@ -475,7 +476,7 @@ function App() {
                   <Reveal
                     key={color.name}
                     className="color-card"
-                    delay={index * 80}
+                    delay={index * 40}
                   >
                     <div className="color-card__swatch" aria-hidden="true">
                       {getSkillIcon(color.name)}
@@ -501,8 +502,8 @@ function App() {
           </section>
 
         <section id="certs" className="section section--design">
-            <Reveal className="section-popup">
-              <Reveal as="header" className="section__header">
+            <Reveal className="section-popup" threshold={0.15}>
+              <Reveal as="header" className="section__header" threshold={0.1}>
                 <h2>CERTIFICATIONS & ACHIEVEMENTS</h2>
               </Reveal>
               <div className="certs__grid">
@@ -510,7 +511,7 @@ function App() {
                   <Reveal
                     key={cert.id}
                     className="cert__item"
-                    delay={index * 80}
+                    delay={index * 20}
                   >
                     <div
                       className="cert__card"
@@ -521,6 +522,7 @@ function App() {
                           src={cert.image}
                           alt={cert.title}
                           className="cert__image"
+                          loading="lazy"
                           onError={(e) => {
                             e.currentTarget.style.display = "none";
                             const placeholder = e.currentTarget.parentElement?.querySelector(".cert__placeholder");
@@ -561,14 +563,17 @@ function App() {
                   src={selectedCert.image}
                   alt={selectedCert.title}
                   className="cert__modal-image"
+                  loading="eager"
                 />
               </div>
             </div>
           )}
 
         <section id="education" className="section section--cta">
-            <Reveal className="section-popup">
-              <h2>WHERE I STUDIED</h2>
+            <Reveal className="section-popup" threshold={0.15}>
+              <Reveal as="header" className="section__header" threshold={0.1}>
+                <h2>WHERE I STUDIED</h2>
+              </Reveal>
               <div className="edu">
                 <div className="edu__item">
                   <div className="edu__badge">M.S.</div>
