@@ -9,8 +9,6 @@
 
 **A modern, responsive portfolio website showcasing projects, experience, certifications, and technical expertise**
 
-[Live Demo](#) • [GitHub](https://github.com/bugfree-kartik/kartik.codes) • [LinkedIn](https://www.linkedin.com/in/kartik-pagey/)
-
 </div>
 
 ---
