@@ -332,7 +332,7 @@ function App() {
             <span className="nav__tagline">Aspiring Full Stack Data Scientist</span>
           </div>
           <div className="nav__social">
-            <a href="/resume.pdf" download="Kartik_Pagey_Resume.pdf" className="nav__resume">Download Resume</a>
+            <a href="/resume.pdf" download="Kartik.Pagey_Resume.pdf" className="nav__resume">Download Resume</a>
             <a href="https://www.linkedin.com/in/kartik-pagey/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -611,7 +611,7 @@ function App() {
               <a href="#certifications">Skills</a>
               <a href="#certs">Certifications & Achievements</a>
               <a href="#education">Education</a>
-              <a href="/resume.pdf" download="Kartik_Pagey_Resume.pdf">Download Resume</a>
+              <a href="/resume.pdf" download="Kartik.Pagey_Resume.pdf">Download Resume</a>
             </div>
             <div className="footer__social">
               <a href="https://www.linkedin.com/in/kartik-pagey/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
